@@ -1,6 +1,10 @@
-Understanding Logistic Regression
-Logistic regression is a statistical method used for binary classification, which is the task of classifying elements into two distinct groups. This algorithm is particularly useful for answering questions that have a "yes" or "no" answer, such as determining if an email is spam (yes/no) or if a tumor is malignant (yes/no).
-The Logistic Regression Model
+# Understanding Logistic Regression
+
+Logistic regression is a statistical method used for binary classification, which is the task of classifying elements into two distinct groups. 
+This algorithm is particularly useful for answering questions that have a "yes" or "no" answer, such as determining if an email is spam (yes/no) or if a tumor is malignant (yes/no).
+
+## The Logistic Regression Model
+
 In logistic regression, we calculate the probability that a given input X belongs to the default class y (usually the class labeled as 1). This probability is denoted as p(y | X; θ), where θ represents the parameters of our model.
 To predict this probability, we use the sigmoid function, denoted as h(x) in its simplest form, which outputs a value between 0 and 1. This output can be interpreted as the probability that X belongs to class 1.
 Optimal Prediction Function
