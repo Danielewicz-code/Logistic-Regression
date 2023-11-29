@@ -24,9 +24,13 @@ The cost function, also known as the loss function, is a measure of how well our
 ***J(θ) = -1/m * Σ [y(i) * log(hθ(x(i))) + (1 - y(i)) * log(1 - hθ(x(i)))]***
 
 Where:
+
 m is the number of observations in our dataset.
+
 **y(i)** is the actual class label of the i-th observation.
+
 **hθ(x(i))** is the model's predicted probability that the i-th observation belongs to class *1*.
+
 Our goal during training is to adjust the parameters *θ* to minimize **J(θ)**.
 
 ## Gradient Descent
