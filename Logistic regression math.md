@@ -5,14 +5,15 @@ This algorithm is particularly useful for answering questions that have a "yes" 
 
 ## The Logistic Regression Model
 
-In logistic regression, we calculate the probability that a given input X belongs to the default class y (usually the class labeled as 1). 
-This probability is denoted as **p(y | X; θ)**, where **θ** represents the parameters of our model.
+In logistic regression, we calculate the probability that a given input X belongs to the default class y (usually the class labeled as *1*). 
+This probability is denoted as **p(y | X; θ)**, where *θ* represents the parameters of our model.
 To predict this probability, we use the sigmoid function, denoted as **h(x)** in its simplest form, which outputs a value between *0* and *1*. This output can be interpreted as the probability that *X* belongs to class *1*.
 
 ## Optimal Prediction Function
 
 When discussing the optimal prediction function, we're looking at how likely our data is under the current model parameters. 
 We represent this likelihood as **h(x)^y * (1 - h(x))^(1 - y)**. It means:
+
 If the true class y is *1*, the probability of the model predicting the true class is ***h(x)***.
 Conversely, if the true class y is *0*, the probability of the model predicting the true class is **1 - h(x)**.
 The model is most accurate when these probabilities are high for all observations in our dataset.
@@ -25,19 +26,24 @@ The cost function, also known as the loss function, is a measure of how well our
 
 Where:
 
-m is the number of observations in our dataset.
+*m* is the number of observations in our dataset.
 
-**y(i)** is the actual class label of the i-th observation.
+**y(i)** is the actual class label of the *i-th* observation.
 
-**hθ(x(i))** is the model's predicted probability that the i-th observation belongs to class *1*.
+**hθ(x(i))** is the model's predicted probability that the *i-th* observation belongs to class *1*.
 
 Our goal during training is to adjust the parameters *θ* to minimize **J(θ)**.
 
 ## Gradient Descent
+
 Gradient descent is an optimization algorithm used to minimize the cost function. It works by iteratively adjusting the parameters θ in the opposite direction of the gradient of the cost function.
 
 The basic steps are:
+
 Calculate the gradient: Determine the direction in which the cost function is increasing.
+
 Update the parameters: Move the parameters θ in the opposite direction of the gradient.
+
 Repeat: Keep updating the parameters until the cost function stops decreasing (or decreases very slowly).
+
 Through this process, we find the values of θ that result in the lowest possible error, which corresponds to the most accurate predictions our model can make given the data.
